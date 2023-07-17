@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/uikit.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/uikit.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
     <script src="js/uikit.js"></script>
     <script src="js/uikit-icons.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script type="module" src="js/simple-map.js"></script>
 
     <title>Project Taris</title>
@@ -55,17 +56,20 @@
 
     <!-- Navigation Bar Mobile Ends -->
     <!-- Demo -->
-    <section class="uk-margin-small-left uk-margin-small-right uk-margin-xlarge-top uk-margin-xlarge-bottom">
+    <section class="uk-margin-small-left uk-margin-small-right uk-margin-xlarge-top uk-margin-s-bottom">
         <h1 class="uk-margin-xlarge-left uk-light uk-text-left uk-margin-xlarge-right">Simple Map Demo</h1>
     </section>
 
     <!-- Demo Section -->
     <hr class="uk-margin-xlarge-left uk-margin-xlarge-right">
     <section id="demo" class="uk-margin-small-left uk-margin-small-right uk-margin-xlarge-top uk-margin-xlarge-bottom">
-
+        
+        <div class="uk-margin-large-left uk-margin-large-right">
+            The map should appear here:
+        </div>
         <!-- Replace this with relevant demo -->
-        The map should appear here:
-        <div id="map"></div>
+        <div id="map" class="uk-margin-large-left uk-margin-large-right">
+        </div>
 
         <!-- prettier-ignore -->
         <script>
