@@ -11,3 +11,48 @@ html{
     width: 80%; /* The width is the width of the web page */
 }
 
+body.unsupported #enter-ar-info {
+    display: none;
+}
+
+body.ar #enter-ar-info {
+    display: none;
+}
+
+#unsupported-info {
+    display: none;
+}
+
+body.unsupported #unsupported-info {
+    display: block;
+}
+
+body.ar #info {
+    display: block;
+}
+
+#stabilization {
+    background-image: url(../assets/stabilization.gif);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+    z-index: 10;
+    display: none;
+}
+
+body.ar #stabilization {
+    display: block;
+}
+
+body.ar.stabilized #stabilization {
+    display: none;
+}
+
+#wrong-hosting-root {
+    display: none;
+}
