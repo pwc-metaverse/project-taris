@@ -1,0 +1,18 @@
+{
+  "name": "project-taris",
+  "version": "0.0.1",
+  "description": "Project Taris, a series of demos to explore using web APIs for geospatial data visualisation.",
+  "private": true,
+  "scripts": {
+    "start": "npx vite",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Oliver Cleveley-Jones",
+  "dependencies": {
+    "@googlemaps/js-api-loader": "^1.13.9",
+    "three": "^0.138.3"
+  },
+  "devDependencies": {
+    "vite": "^4.4.4"
+  }
+}
