@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/uikit.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/uikit.js"></script>
+    <script src="js/uikit-icons.js"></script>
+    <script type="module" src="js/simple-map.js"></script>
+
+    <title>Project Taris</title>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="uk-navbar-container uk-margin-small-left uk-margin-small-right uk-visible@m uk-margin-xlarge-left uk-margin-xlarge-right" uk-navbar uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+
+        <div class="uk-navbar-left">
+            <a href="" class="uk-navbar-item uk-logo uk-light">ProjectTaris.</a>
+        </div>
+        <div class="uk-navbar-right">
+
+            <ul class="uk-navbar-nav uk-light">
+                <li><a class="uk-button-text uk-text-capitalize" href="index.html">Home</a></li>
+                <li><a class="uk-button-text uk-text-capitalize" href="#demo" uk-scroll>Demo</a></li>
+
+            </ul>
+
+        </div>
+    </nav>
+    <!-- Navigation Bar Ends  -->
+    <!-- Navigation Bar Mobile -->
+    <nav class="uk-navbar-container uk-margin-small-left uk-margin-small-right uk-hidden@m uk-margin-xlarge-left uk-margin-xlarge-right" uk-navbar uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+
+        <div class="uk-navbar-left">
+            <a href="" class="uk-navbar-item uk-logo uk-light">ProjectTaris.</a>
+        </div>
+
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-light">
+                <li><button uk-toggle="target: #offcanvas-nav" type="button" uk-navbar-toggle-icon></button></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Change This -->
+    <div id="offcanvas-nav" uk-offcanvas="overlay: true">
+        <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+            <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+                <li class="uk-active"><a href="index.html">Home</a></li>
+                <li class="uk-active"><a href="#demo" uk-scroll>Demo</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Navigation Bar Mobile Ends -->
+    <!-- Demo -->
+    <section class="uk-margin-small-left uk-margin-small-right uk-margin-xlarge-top uk-margin-xlarge-bottom">
+        <h1 class="uk-margin-xlarge-left uk-light uk-text-left uk-margin-xlarge-right">Simple Map Demo</h1>
+    </section>
+
+    <!-- Demo Section -->
+    <hr class="uk-margin-xlarge-left uk-margin-xlarge-right">
+    <section id="demo" class="uk-margin-small-left uk-margin-small-right uk-margin-xlarge-top uk-margin-xlarge-bottom">
+
+        <!-- Replace this with relevant demo -->
+        The map should appear here:
+        <div id="map"></div>
+
+        <!-- prettier-ignore -->
+        <script>
+            (g => {
+                var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {});
+                var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => {
+                    await (a = m.createElement("script"));
+                    e.set("libraries", [...r] + "");
+                    for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]);
+                    e.set("callback", c + ".maps." + q);
+                    a.src = `https://maps.${c}apis.com/maps/api/js?` + e;
+                    d[q] = f;
+                    a.onerror = () => h = n(Error(p + " could not load."));
+                    a.nonce = m.querySelector("script[nonce]")?.nonce || "";
+                    m.head.append(a)
+                }));
+                d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n))
+            })
+                ({
+                    key: "AIzaSyDaAhTNJqCrWQZ17CcfhWwvzkWE1u4QHbs",
+                    v: "beta"
+                });
+        </script>
+
+    </section>
+    <hr class="uk-margin-xlarge-left uk-margin-xlarge-right">
+    <!-- Demo Section Ends -->
+
+</body>
+</html>
