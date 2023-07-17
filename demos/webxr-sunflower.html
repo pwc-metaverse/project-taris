@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/uikit.css">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <script src="../js/uikit.js"></script>
+    <script src="../js/uikit-icons.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+    <title>Project Taris</title>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="uk-navbar-container uk-margin-small-left uk-margin-small-right uk-visible@m uk-margin-xlarge-left uk-margin-xlarge-right" uk-navbar uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+
+        <div class="uk-navbar-left">
+            <a href="" class="uk-navbar-item uk-logo uk-light">ProjectTaris.</a>
+        </div>
+        <div class="uk-navbar-right">
+
+            <ul class="uk-navbar-nav uk-light">
+                <li><a class="uk-button-text uk-text-capitalize" href="/index.html">Home</a></li>
+                <li><a class="uk-button-text uk-text-capitalize" href="#demo" uk-scroll>Demo</a></li>
+
+            </ul>
+
+        </div>
+    </nav>
+    <!-- Navigation Bar Ends  -->
+    <!-- Navigation Bar Mobile -->
+    <nav class="uk-navbar-container uk-margin-small-left uk-margin-small-right uk-hidden@m uk-margin-xlarge-left uk-margin-xlarge-right" uk-navbar uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+
+        <div class="uk-navbar-left">
+            <a href="" class="uk-navbar-item uk-logo uk-light">ProjectTaris.</a>
+        </div>
+
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-light">
+                <li><button uk-toggle="target: #offcanvas-nav" type="button" uk-navbar-toggle-icon></button></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Change This -->
+    <div id="offcanvas-nav" uk-offcanvas="overlay: true">
+        <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+            <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+                <li class="uk-active"><a href="/index.html">Home</a></li>
+                <li class="uk-active"><a href="#demo" uk-scroll>Demo</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Navigation Bar Mobile Ends -->
+    <!-- Demo -->
+    <section class="uk-margin-small-left uk-margin-small-right uk-margin-xlarge-top uk-margin-s-bottom">
+        <h1 class="uk-margin-xlarge-left uk-light uk-text-left uk-margin-xlarge-right">WebXR Sunflower Demo</h1>
+    </section>
+
+    <!-- Demo Section -->
+    <hr class="uk-margin-xlarge-left uk-margin-xlarge-right">
+    <section id="demo" class="uk-margin-small-left uk-margin-small-right uk-margin-xlarge-top uk-margin-xlarge-bottom">
+
+        <div id="enter-ar-info" class="uk-margin-small-left uk-margin-small-right">
+            <h2>Augmented Reality with the WebXR Device API</h2>
+            <p>
+                This is an experiment using augmented reality features with the WebXR Device API.
+                Upon entering AR, you will be surrounded by a world of cubes.
+            </p>
+
+            <!-- Starting an immersive WebXR session requires user interaction. Start the WebXR experience with a simple button. -->
+            <a id="enter-ar" class="uk-margin-xlarge-left uk-text-capitalize uk-button uk-button-secondary">
+                Start augmented reality
+            </a>
+        </div>
+
+        <div id="unsupported-info" class="uk-margin-small-left uk-margin-small-right">
+            <h2>Unsupported Browser</h2>
+            <p>
+                Your browser does not support AR features with WebXR. Access this page using a WebXR enabled device.
+            </p>
+        </div>
+        <script src="../js/webxr-sunflower.js"></script>
+        <div id="stabilization"></div>
+
+    </section>
+    <hr class="uk-margin-xlarge-left uk-margin-xlarge-right">
+    <!-- Demo Section Ends -->
+
+</body>
+</html>
